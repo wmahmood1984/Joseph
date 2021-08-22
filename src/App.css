@@ -1,5 +1,26 @@
 .App {
   text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none solid rgb(255,255,255);
+  text-transform: uppercase;
+  word-spacing: 0px;
+  background-color: #0B354E;
+  background-position: 0% 0%;
+  color:#FFFFFF;
+
+  width: 86.4;
+  border: 0px solid #E5E7EB;
+  display: flex;
+  position: relative;
+  top: 0px;
+  right:0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url("./Assets/3d08e03cb40252526fee2036a67f07f1.gif") ;
+  overflow: hidden;
+  
 }
 
 .App-logo {

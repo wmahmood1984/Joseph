@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import DashBoard from './components/DashBoard';
+
+import { Routes, Route} from 'react-router'
+import Home from './components/Home'
+import AppBar from './AppBars/AppBar'
+import { useDispatch, useSelector } from 'react-redux';
+import {initWeb3} from './store/ui/index'
 
 function App() {
+ const dispatch = useDispatch()
+useEffect(()=>{
+dispatch(initWeb3)
+},[])
+
+
+
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+<Routes >
+  <Route path="/" element={<Home ></Home>}></Route>
+  <Route path="/:referrer" element={<Home ></Home>}></Route>
+  <Route path="dashboard" element={<DashBoard ></DashBoard> }></Route>
+</Routes>
+
+
+
+    </div>)
 }
 
 export default App;
