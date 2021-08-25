@@ -18,10 +18,12 @@ export default function Home() {
                <div>
                    <div style={{height:"64px", width:"599px", fontSize:"24px", textAlign:"left"}}>Transparent Token is the best way to passively earn ETH by simply holding.</div>
                    <div style={{height:"164px", width:"599px", fontSize:"16px", textAlign:"left"}}
-                   >As the Transparent team we know what it takes to make a defi project run. We will be doing everything in our power to ensure the long-term success of this project. Part of that of course is the job of the community. Anyone that has been in a successful long-term project knows that with full community participation, there are no limits to how far this project can go. So grab your bag, watch your passive rewards climb, and join the Transparent movement!</div>
+                   >As the Transparent team we know what it takes to make a defi project run. We will be doing everything in our power to ensure the long-term success of this project. Part of that of course is the job of the community. Anyone that has been in a successful long-term project knows that with full community participation, there are no limits to how far this project can go. So grab your bag, watch your passive rewards climb, and join the Transparent movement!</div><br/><br/>
                    <div style={{height:"60px", width:"599px", fontSize:"16px", textAlign:"left", display:"flex"}}>
-                       <button style={{height:"50px", width:"146px", fontSize:"16px", backgroundColor:"white", color:"black", border:"0 solid", borderRadius:"9999px"}}>Buy Transparent</button>
-                       <button style={{height:"50px", width:"200px", fontSize:"16px", backgroundColor:"#0B354E", color:"white", border:"0 solid", borderRadius:"9999px"}}>Access the DashBoard</button>
+                       <button onClick={()=>{window.open("https://app.uniswap.org/#/swap?use=V2/ETH/0xA0f6F7f7E5D41BfF74c3F689f06b6A1ec35A7470")}} 
+                            style={{height:"50px", width:"146px", fontSize:"16px", backgroundColor:"white", color:"black", border:"0 solid", borderRadius:"9999px"}}>Buy E T H A P</button>
+                       <Link to="dashboard"
+                            style={{height:"50px",textAlign:"center", paddingTop:"10px", minWidth:"250px", fontSize:"16px", backgroundColor:"#0B354E", color:"white", border:"0 solid", borderRadius:"9999px", marginLeft:"30px"}}>Access the DashBoard</Link>
                    </div>
                </div>
                <img style={{height:"299px", width:"299px"}} src={image}></img>

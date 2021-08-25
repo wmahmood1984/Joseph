@@ -11,7 +11,7 @@ import {initWeb3} from './store/ui/index'
 function App() {
  const dispatch = useDispatch()
 useEffect(()=>{
-dispatch(initWeb3)
+dispatch(initWeb3())
 },[])
 
 
