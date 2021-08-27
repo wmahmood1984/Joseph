@@ -6,13 +6,30 @@ import { Routes, Route} from 'react-router'
 import Home from './components/Home'
 import AppBar from './AppBars/AppBar'
 import { useDispatch, useSelector } from 'react-redux';
-import {initWeb3} from './store/ui/index'
+import {initWeb3,toggle} from './store/ui/index'
+
+
+
 
 function App() {
+
+  const toggle1 = useSelector(
+    state => state.adoptReducer.toggle)
+
  const dispatch = useDispatch()
 useEffect(()=>{
 dispatch(initWeb3())
-},[])
+var interval = setInterval(() => {
+dispatch(toggle())
+
+      }, 5000);
+
+
+  
+return ()=>{clearInterval(interval)}
+
+
+},[toggle1])
 
 
 
